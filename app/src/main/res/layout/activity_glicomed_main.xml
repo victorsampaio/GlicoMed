@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".GlicomedMainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monitor your blood glucose"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="mg/dL"
+        android:id="@+id/txtvmgdL"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/edtMgdLValue"
+        android:layout_below="@+id/txtvmgdL"
+        android:layout_alignStart="@+id/textView" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/btnSave"
+        android:layout_toStartOf="@+id/txtvmgdL"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/edtMgdLValue"
+        android:layout_alignEnd="@+id/edtMgdLValue" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/btnClear"
+        android:layout_toEndOf="@+id/txtvmgdL"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_toStartOf="@+id/btnSave"
+        android:layout_alignStart="@+id/txtvmgdL" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/btnDelete"
+        android:layout_toEndOf="@+id/btnClear"
+        android:layout_alignTop="@+id/btnClear"
+        android:layout_alignStart="@+id/edtMgdLValue" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_toStartOf="@+id/btnSave"
+        android:fillViewport="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btnSave">
+
+        <TextView
+            android:id="@+id/textViewSaved"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text=""/>
+
+
+    </ScrollView>
+
+</RelativeLayout>
