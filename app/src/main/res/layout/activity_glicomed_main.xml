@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Monitor your blood glucose"
-        android:id="@+id/textView"
+        android:id="@+id/textViewReports"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -24,7 +24,7 @@
         android:text="mg/dL"
         android:id="@+id/txtvmgdL"
         android:layout_marginTop="39dp"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/textViewReports"
         android:layout_centerHorizontal="true" />
 
     <EditText
@@ -34,7 +34,7 @@
         android:ems="10"
         android:id="@+id/edtMgdLValue"
         android:layout_below="@+id/txtvmgdL"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignStart="@+id/textViewReports" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -87,5 +87,15 @@
 
 
     </ScrollView>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="->"
+        android:id="@+id/btnNext"
+        android:layout_toEndOf="@+id/textViewReports"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

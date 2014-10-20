@@ -4,5 +4,6 @@
     <string name="app_name">GlicoMed</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_reports">ReportsActivity</string>
 
 </resources>

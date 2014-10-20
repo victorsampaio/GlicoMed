@@ -1,11 +1,14 @@
 package android.com.glicomed;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -17,7 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-public class GlicomedMainActivity extends Activity {
+public class GlicomedMainActivity extends Activity implements OnClickListener{
     private static final String ARCHIVE = "archive.txt";
     private static final String CATEGORY = "glicomed";
 
@@ -27,6 +30,10 @@ public class GlicomedMainActivity extends Activity {
         setContentView(R.layout.activity_glicomed_main);
 
         Button button;
+
+        // Next Activity - ReportsActivity
+        button = (Button)findViewById(R.id.btnNext);
+        button.setOnClickListener(this);
 
         //CLEAR
         button = (Button)findViewById(R.id.btnClear);
@@ -102,6 +109,14 @@ public class GlicomedMainActivity extends Activity {
         }
     }
 
+
+    // Intent -> Next Activity - ReportsActivity - onClick
+    @Override
+    public void onClick(View v) {
+        Intent it = new Intent(this, ReportsActivity.class);
+        startActivity(it);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
