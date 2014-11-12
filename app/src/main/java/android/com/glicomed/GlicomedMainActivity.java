@@ -41,7 +41,8 @@ public class GlicomedMainActivity extends Activity implements OnClickListener{
             @Override
             public void onClick(View v) {
                 EditText text = (EditText)findViewById(R.id.edtMgdLValue);
-                text.setText("");
+                //text.setText("");
+                text.getText().clear();
             }
         });
 
